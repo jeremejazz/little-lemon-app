@@ -1,6 +1,6 @@
 import React from "react";
 
-import { View, Text, ScrollView, FlatList, StyleSheet } from "react-native";
+import { View, Text, ScrollView, FlatList, StyleSheet, ListRenderItem } from "react-native";
 
 const menuItemsToDisplay = [
   { name: "Hummus1", price: "$5.00", id: "1A" },
@@ -40,11 +40,12 @@ const Item = (item: { name: string; price: string; id?: string }) => {
 };
 
 const MenuItems = () => {
+  const renderItem = ({ item }: {item: {name:string, price: string}}) => <Item name={item.name} price={item.price} />;
   return (
     <View style={{ flex: 1 }}>
       <FlatList
         data={menuItemsToDisplay}
-        renderItem={({ item }) => <Item name={item.name} price={item.price} />}
+        renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
     </View>
