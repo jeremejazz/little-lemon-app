@@ -28,13 +28,9 @@ const menuItemsToDisplay = [
 
 const Item = (item: { name: string; price: string; id?: string }) => {
   return (
-    <View style={itemStyles.container}>
-      <View style={[itemStyles.common, itemStyles.nameColumnContainer]}>
-        <Text style={itemStyles.textStyle}>{item.name}</Text>
-      </View>
-      <View style={[itemStyles.common, itemStyles.priceColumnContainer]}>
-        <Text style={[itemStyles.textStyle, itemStyles.priceColumnText]}>{item.price}</Text>
-      </View>
+    <View style={styles.innerContainer}>
+      <Text style={styles.itemText}>{item.name}</Text>
+      <Text style={styles.itemText}>{item.price}</Text>
     </View>
   );
 };
@@ -52,28 +48,19 @@ const MenuItems = () => {
   );
 };
 
-const itemStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "row",
   },
-  common:{
-      padding: 20
+  innerContainer:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 40,
+    paddingVertical: 20
   },
-  textStyle:{
+  itemText:{
       color: "#F4CE14",
       fontSize: 20
-  },
-  nameColumnContainer: {
-      flex: 0.75
-  },
-  priceColumnContainer:{
-      flex: 0.25,
-      paddingRight: 20
-      
-  },
-  priceColumnText:{
-    textAlign: 'right',
   }
 });
 
