@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ec9973",
   },
   text: {
-    paddingBottom: 40,
     fontSize: 30,
     color: "black",
     textAlign: "center",
