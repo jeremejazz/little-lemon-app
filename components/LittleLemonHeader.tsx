@@ -1,13 +1,16 @@
 import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function LittleLemonHeader() {
   return (
     <View style={styles.container}>
-      <Text
-        style={styles.text}
-      >
-        Little Lemon
-      </Text>
+      <SafeAreaView>
+        <Text
+          style={styles.text}
+        >
+          Little Lemon
+        </Text>
+      </SafeAreaView>
     </View>
   );
 }
@@ -17,7 +20,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ec9973",
   },
   text: {
-    paddingTop: 50,
     paddingBottom: 40,
     fontSize: 30,
     color: "black",
