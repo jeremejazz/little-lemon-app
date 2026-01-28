@@ -3,7 +3,7 @@ import React from "react";
 import { View, Text, ScrollView, FlatList, StyleSheet, ListRenderItem } from "react-native";
 
 const menuItemsToDisplay = [
-  { name: "Hummus1", price: "$5.00", id: "1A" },
+  { name: "Hummus", price: "$5.00", id: "1A" },
   { name: "Moutabal", price: "$5.00", id: "2B" },
   { name: "Falafel", price: "$7.50", id: "3C" },
   { name: "Marinated Olives", price: "$5.00", id: "4D" },
