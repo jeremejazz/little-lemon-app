@@ -100,7 +100,8 @@ const styles = StyleSheet.create({
   sectionHeaderText:{
     color: "#000000",
     textAlign: 'center',
-    fontSize: 22
+    fontSize: 26,
+    flexWrap: 'wrap'
   }
 
 });
